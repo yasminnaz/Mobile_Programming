@@ -1,0 +1,24 @@
+{
+  "sunnah_harian": [
+    {
+      "day": "Senin",
+      "title": "Puasa Sunnah Senin",
+      "icon": "fasting"
+    },
+    {
+      "day": "Kamis",
+      "title": "Puasa Sunnah Kamis",
+      "icon": "fasting"
+    },
+    {
+      "day": "Jumat",
+      "title": "Membaca Surah Al-Kahfi",
+      "icon": "book"
+    },
+    {
+      "day": "Jumat",
+      "title": "Memperbanyak Shalawat",
+      "icon": "book"
+    }
+  ]
+}

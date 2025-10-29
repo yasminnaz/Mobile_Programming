@@ -1,0 +1,29 @@
+{
+  "events": [
+    {
+      "hijri_day": 1,
+      "title": "Awal Bulan Rabiul Awal",
+      "date": "1 Rabiul Awal 1447 H / 25 Agustus 2025"
+    },
+    {
+      "hijri_day": 12,
+      "title": "Maulid Nabi Muhammad SAW",
+      "date": "12 Rabiul Awal 1447 H / 5 September 2025"
+    },
+    {
+      "hijri_day": 13,
+      "title": "Ayyamul Bidh",
+      "date": "13 Rabiul Awal 1447 H / 6 September 2025"
+    },
+    {
+      "hijri_day": 14,
+      "title": "Ayyamul Bidh",
+      "date": "14 Rabiul Awal 1447 H / 7 September 2025"
+    },
+    {
+      "hijri_day": 15,
+      "title": "Ayyamul Bidh",
+      "date": "15 Rabiul Awal 1447 H / 8 September 2025"
+    }
+  ]
+}

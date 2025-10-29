@@ -1,0 +1,24 @@
+{
+  "sunnah_bulanan": [
+    {
+      "hijri_day": 1,
+      "title": "Doa Awal Bulan",
+      "icon": "dua"
+    },
+    {
+      "hijri_day": 13,
+      "title": "Puasa Ayyamul Bidh (13 Rabiul Awal)",
+      "icon": "fasting"
+    },
+    {
+      "hijri_day": 14,
+      "title": "Puasa Ayyamul Bidh (14 Rabiul Awal)",
+      "icon": "fasting"
+    },
+    {
+      "hijri_day": 15,
+      "title": "Puasa Ayyamul Bidh (15 Rabiul Awal)",
+      "icon": "fasting"
+    }
+  ]
+}
