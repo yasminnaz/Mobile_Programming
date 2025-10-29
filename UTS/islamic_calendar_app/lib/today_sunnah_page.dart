@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'CalendarPage.dart';
+import 'calendar_page.dart';
 import 'edit_profile_page.dart';
 
 class TodaysSunnahPage extends StatefulWidget {
@@ -30,7 +30,6 @@ class _TodaysSunnahPageState extends State<TodaysSunnahPage> {
     _loadSunnahData();
   }
 
-  /// 🔹 Memuat data JSON dari assets
   Future<void> _loadSunnahData() async {
     try {
       final harianData = await rootBundle.loadString(
@@ -56,7 +55,6 @@ class _TodaysSunnahPageState extends State<TodaysSunnahPage> {
     }
   }
 
-  /// 🔹 Mengambil sunnah yang sesuai dengan hari & tanggal Hijriah
   List<Map<String, dynamic>> getTodaySunnah() {
     final dayName = toBeginningOfSentenceCase(
       DateFormat('EEEE', 'id_ID').format(widget.today),
@@ -101,7 +99,6 @@ class _TodaysSunnahPageState extends State<TodaysSunnahPage> {
             ),
             const SizedBox(height: 20),
 
-            // 🔹 Tanggal Hijriah & Masehi
             Text(
               "${widget.hijriDate['day']} ${widget.hijriDate['month']} ${widget.hijriDate['year']} H",
               style: GoogleFonts.poppins(
@@ -117,7 +114,6 @@ class _TodaysSunnahPageState extends State<TodaysSunnahPage> {
             ),
             const SizedBox(height: 30),
 
-            // 🔹 Daftar Sunnah Hari Ini
             Expanded(
               child: todaySunnah.isEmpty
                   ? Center(
@@ -171,7 +167,6 @@ class _TodaysSunnahPageState extends State<TodaysSunnahPage> {
     );
   }
 
-  /// 🔹 Widget Card Sunnah
   Widget _buildSunnahCard({required String title, required IconData icon}) {
     return Container(
       padding: const EdgeInsets.all(16),
@@ -200,7 +195,6 @@ class _TodaysSunnahPageState extends State<TodaysSunnahPage> {
     );
   }
 
-  /// 🔹 Pemetaan icon
   IconData _getIconFor(String? name) {
     switch (name) {
       case 'fasting':

@@ -41,7 +41,6 @@ class _EditProfilePageState extends State<EditProfilePage> {
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            // Foto profil bundar
             Stack(
               alignment: Alignment.bottomRight,
               children: [
@@ -66,26 +65,20 @@ class _EditProfilePageState extends State<EditProfilePage> {
             ),
             const SizedBox(height: 30),
 
-            // Nama
             _buildTextField("Name", nameController),
 
-            // Email
             _buildTextField("Email", emailController),
 
-            // Password
             _buildTextField("Password", passwordController, obscureText: true),
 
-            // Date of Birth
             _buildDatePicker(context),
 
             const SizedBox(height: 30),
 
-            // Tombol Save
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  // Aksi simpan
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text("Changes saved!")),
                   );
@@ -113,7 +106,6 @@ class _EditProfilePageState extends State<EditProfilePage> {
     );
   }
 
-  // Widget helper untuk TextField
   Widget _buildTextField(
     String label,
     TextEditingController controller, {
@@ -141,7 +133,6 @@ class _EditProfilePageState extends State<EditProfilePage> {
     );
   }
 
-  // Widget date picker
   Widget _buildDatePicker(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

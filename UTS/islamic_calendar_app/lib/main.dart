@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'CalendarPage.dart';
+import 'calendar_page.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await initializeDateFormatting('id', null); // inisialisasi locale Indonesia
+  await initializeDateFormatting('id', null);
   runApp(const MyApp());
 }
 

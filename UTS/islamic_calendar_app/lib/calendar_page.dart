@@ -13,13 +13,10 @@ class CalendarPage extends StatefulWidget {
 }
 
 class _CalendarPageState extends State<CalendarPage> {
-  // Tanggal yang dipilih, default ke 12 (untuk menyoroti Maulid Nabi)
   int selectedHijriDay = 12;
 
-  // List untuk menyimpan semua event dari events.json
   List<Map<String, dynamic>> allEvents = [];
 
-  // Mapping Hari Hijriah ke Tanggal Masehi (sementara/hardcoded)
   final Map<int, String> masehiDates = {
     1: '25',
     2: '26',
@@ -61,7 +58,6 @@ class _CalendarPageState extends State<CalendarPage> {
   /// Fungsi untuk memuat data event dari assets/events.json
   Future<void> _loadEvents() async {
     try {
-      // Path sudah disesuaikan ke 'lib/assets/data/events.json'
       final String jsonString = await rootBundle.loadString(
         'lib/assets/data/events.json',
       );
@@ -77,7 +73,6 @@ class _CalendarPageState extends State<CalendarPage> {
     }
   }
 
-  /// Fungsi helper untuk mendapatkan event berdasarkan hari Hijriah yang dipilih
   List<Map<String, dynamic>> _getEventsForSelectedDay() {
     return allEvents.where((e) {
       final int eventDay = (e['hijri_day'] is int
@@ -98,7 +93,6 @@ class _CalendarPageState extends State<CalendarPage> {
               height: constraints.maxHeight,
               child: Stack(
                 children: [
-                  // Scroll utama
                   SingleChildScrollView(
                     padding: const EdgeInsets.only(bottom: 160),
                     child: Column(
@@ -226,7 +220,6 @@ class _CalendarPageState extends State<CalendarPage> {
                     ),
                   ),
 
-                  // Bottom sheet
                   DraggableScrollableSheet(
                     initialChildSize: 0.25,
                     minChildSize: 0.25,
@@ -299,8 +292,6 @@ class _CalendarPageState extends State<CalendarPage> {
         ),
       ),
 
-      // Floating Action Button
-
       // Bottom Navigation Bar
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
@@ -312,9 +303,7 @@ class _CalendarPageState extends State<CalendarPage> {
 
           if (index == 1) {
             final masehiDay = int.parse(masehiDates[selectedHijriDay]!);
-            final masehiMonth = masehiDay >= 25
-                ? 8
-                : 9; // Agustus–September 2025
+            final masehiMonth = masehiDay >= 25 ? 8 : 9;
             final masehiYear = 2025;
 
             final hijriDate = {
@@ -348,7 +337,6 @@ class _CalendarPageState extends State<CalendarPage> {
     );
   }
 
-  /// Widget untuk menampilkan Event Card
   Widget _buildEventCard({required String title, required String date}) {
     return Container(
       padding: const EdgeInsets.all(12),
