@@ -16,9 +16,12 @@ Aplikasi ini dibuat untuk memenuhi kebutuhan umat Muslim akan kalender islami ya
 - shared_preferences – penyimpanan lokal data sederhana
 - http – untuk melakukan permintaan HTTP (GET Request) ke API eksternal.
 #### Sumber Data:
-- API AlAdhan: Digunakan untuk mengambil data kalender Hijriah, konversi tanggal, dan Hari Besar/Libur Islam.
 - sunnah_harian.json
 - sunnah_bulanan.json
+- API AlAdhan: Digunakan untuk mengambil data kalender Hijriah, konversi tanggal, dan Hari Besar/Libur Islam.
+##### Endpoint yang digunakan: 
+Kalender Bulanan Hijriah ke Masehi: https://api.aladhan.com/v1/hToGCalendar/{bulan}/{tahun}
+
 
 ### Fitur Utama
 #### Islamic Calendar App:
@@ -30,6 +33,7 @@ Aplikasi ini dibuat untuk memenuhi kebutuhan umat Muslim akan kalender islami ya
 -**Profile Page:** untuk mengubah data profil pengguna.
 
 
+.
 ### Langkah menjalankan aplikasi
 - Buka folder islamic_calendar_app.
 Jalankan:
@@ -48,7 +52,7 @@ flutter run*
 
 
 
-
+.
 ##### Catatan Pengembangan
 Aplikasi telah berhasil mengintegrasikan API dan menghilangkan ketergantungan pada data statis JSON:
 
