@@ -1,16 +1,57 @@
-# flutter_application_2
+# Aplikasi Kalender Hijriah dan Pengingat Ibadah Sunnah
+##### Yasmin Nur Azizah - 230605110008
 
-A new Flutter project.
 
-## Getting Started
+Aplikasi mobile yang membantu umat Islam mengetahui tanggal Hijriyah secara akurat serta memberikan pengingat ibadah sunnah harian seperti puasa Senin-Kamis dan Ayyamul Bidh. Dikembangkan menggunakan Flutter, aplikasi ini memiliki antarmuka yang sederhana, lembut, dan mudah digunakan.
 
-This project is a starting point for a Flutter application.
+Aplikasi ini dibuat untuk memenuhi kebutuhan umat Muslim akan kalender islami yang praktis, tidak hanya menampilkan tanggal Hijriyah, tetapi juga memberikan informasi hari besar Islam dan pengingat amalan sunnah.
 
-A few resources to get you started if this is your first Flutter project:
+#### Teknologi yang Digunakan
+- Framework: Flutter
+- Bahasa Pemrograman: Dart
+- Desain Antarmuka: Figma
+#### Dependency Tambahan:
+- google_fonts – untuk gaya huruf modern
+- intl – format tanggal dan lokal Indonesia
+- shared_preferences – penyimpanan lokal data sederhana
+- http – untuk melakukan permintaan HTTP (GET Request) ke API eksternal.
+#### Sumber Data:
+- API AlAdhan: Digunakan untuk mengambil data kalender Hijriah, konversi tanggal, dan Hari Besar/Libur Islam.
+- sunnah_harian.json
+- sunnah_bulanan.json
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Fitur Utama
+#### Islamic Calendar App:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+-**Calendar Page:** menampilkan tanggal Hijriyah dan Masehi serta hari-hari penting Islam.
+
+-**Todays Sunnah Page:** memberikan pengingat otomatis untuk puasa dan amalan sunnah harian.
+
+-**Profile Page:** untuk mengubah data profil pengguna.
+
+
+### Langkah menjalankan aplikasi
+- Buka folder islamic_calendar_app.
+Jalankan:
+*flutter pub get
+flutter run*
+- Setelah aplikasi berjalan, halaman utama akan menampilkan kalender Hijriyah bulan Jumadil Akhir 1447 H.
+- Tekan salah satu tanggal untuk melihat event Islam pada hari tersebut.
+- Gunakan navigasi bawah (BottomNavigationBar) untuk berpindah halaman:
+
+**📅 Kalender** → menampilkan tanggal Hijriyah dan event.
+  
+**🔔 Sunnah Harian**→ menampilkan amalan seperti puasa Senin–Kamis atau Ayyamul Bidh.
+
+**👤 Profil** → menampilkan form Edit Profil Pengguna.
+
+
+
+
+
+##### Catatan Pengembangan
+Aplikasi telah berhasil mengintegrasikan API dan menghilangkan ketergantungan pada data statis JSON:
+
+- **Integrasi API:** Data kalender, hari besar, dan konversi tanggal sepenuhnya diambil dari **API AlAdhan**, didukung oleh penanganan *error* yang ketat (termasuk *encoding* dan *type safety*).
+- **Penyimpanan Profil:** Fitur profil menggunakan *shared_preferences* untuk menyimpan perubahan data pengguna secara lokal dan persisten.
+- **Pengembangan Lanjut:** Fitur yang direncanakan untuk tahap berikutnya adalah implementasi fitur CRUD (Create, Read, Update, Delete) untuk catatan ibadah pengguna.
